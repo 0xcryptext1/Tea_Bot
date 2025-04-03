@@ -16,8 +16,8 @@ Bu projeyi çalıştırmak için aşağıdaki yazılımların yüklü olması ge
    Terminal veya komut istemcisinde aşağıdaki komutu kullanarak projeyi klonlayın:
 
    ```bash
-   git clone https://github.com/0xcryptext1/Tea-Bot.git
-   cd Tea-Bot
+   git clone https://github.com/0xcryptext1/Tea_Bot.git
+   cd Tea_Bot
    ```
 
 2. **Gerekli Kütüphaneleri Yükleyin**
