@@ -42,8 +42,10 @@ Projenin ana fonksiyonlarını çalıştırmak için aşağıdaki komutu kullan�
 ```bash
 python main.py
 ```
+run.bat dosyasını kullanarak da çalıştırabilirsiniz.
 
 ## Kullanım
+Bot başldıktan sonra gas price değerini soracaktır. Bu değeri sepolia explorer sitesinde sol üstteki değerin biraz üzerinde girebilirsiniz.
 
 Bot, rastgele olarak belirlenen işlemleri gerçekleştirecektir. Her işlem için konsolda bilgi mesajları görüntülenecektir.
 

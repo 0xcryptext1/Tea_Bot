@@ -17,7 +17,7 @@ def load_wallet():
         private_key = parts[1].strip()
     return address, private_key
 
-def deposit_tea_token():
+def deposit_tea_token(gas_price=350):
     print("--------------------------------")
     print("deposit işlemi başlatılıyor.")
     address, private_key = load_wallet()
@@ -32,7 +32,7 @@ def deposit_tea_token():
         'to': '0xD0501e868AEC9973E118B975E00E1d078c88D263',
         'value': amount_in,
         'gas': 200000,
-        'gasPrice': w3.to_wei('0.002000292', 'gwei'),
+        'gasPrice': w3.to_wei(str(gas_price), 'gwei'),
         'nonce': w3.eth.get_transaction_count(address),
         'chainId': 10218,
         'data': tx_data
@@ -47,9 +47,9 @@ def deposit_tea_token():
     else:
         print("İşlem başarısız oldu.")
 
-    time.sleep(random.randint(2, 5))
+    time.sleep(random.randint(3, 8))
 
-def withdraw_tea_token():
+def withdraw_tea_token(gas_price=350):
     print("--------------------------------")
     print("withdraw işlemi başlatılıyor.")
 
@@ -66,7 +66,7 @@ def withdraw_tea_token():
         'to': '0xD0501e868AEC9973E118B975E00E1d078c88D263',
         'value': 0,
         'gas': 200000,
-        'gasPrice': w3.to_wei('0.002000292', 'gwei'),
+        'gasPrice': w3.to_wei(str(gas_price), 'gwei'),
         'nonce': w3.eth.get_transaction_count(address),
         'chainId': 10218,
         'data': tx_data
@@ -81,7 +81,7 @@ def withdraw_tea_token():
     else:
         print("İşlem başarısız oldu.")
     
-    time.sleep(random.randint(2, 5))
+    time.sleep(random.randint(3, 8))
 
 def main():
     deposit_tea_token()

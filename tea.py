@@ -42,14 +42,14 @@ def create_tx_data2(amount_in, amount_out_min, to_address, deadline, path):
     )
     return tx_data2
 
-def tea_DAUN_swap():
+def tea_DAUN_swap(gas_price=500):
     print("--------------------------------")
     print("TEA --> DAUN Swap başlatılıyor.")
     
     address, private_key = load_wallet()
     
     amount_in = w3.to_wei(random.uniform(0.001, 0.005), 'ether')
-    amount_out_min = w3.to_wei(0.0005, 'ether')
+    amount_out_min = w3.to_wei(0.0001, 'ether')
     path = [
         "0x7752dbd604a5c43521408ee80486853dceb4cceb",
         "0xb1885A41876ff1BcB107a80A352A800b3D394f6F"
@@ -65,7 +65,7 @@ def tea_DAUN_swap():
         'data': tx_data,
         'value': amount_in,
         'gas': 300000,
-        'gasPrice': w3.to_wei('0.002000292', 'gwei'),
+        'gasPrice': w3.to_wei(str(gas_price), 'gwei'),
         'nonce': w3.eth.get_transaction_count(address),
         'chainId': 10218
     }
@@ -79,9 +79,9 @@ def tea_DAUN_swap():
     else:
         print("TEA --> DAUN Swap başarısız.")
     
-    time.sleep(random.randint(2, 5))
+    time.sleep(random.randint(3, 8))
 
-def tea_HBRL_swap():
+def tea_HBRL_swap(gas_price=500):
     print("--------------------------------")
     print("TEA --> HBRL Swap başlatılıyor.")
     
@@ -105,7 +105,7 @@ def tea_HBRL_swap():
         'data': tx_data,
         'value': amount_in,
         'gas': 300000,
-        'gasPrice': w3.to_wei('0.002000292', 'gwei'),
+        'gasPrice': w3.to_wei(str(gas_price), 'gwei'),
         'nonce': w3.eth.get_transaction_count(address),
         'chainId': 10218
     }
@@ -119,9 +119,9 @@ def tea_HBRL_swap():
     else:
         print("TEA --> HBRL Swap başarısız.")
        
-    time.sleep(random.randint(2, 5))
+    time.sleep(random.randint(3, 8))
 
-def hbrl_tea_swap():
+def hbrl_tea_swap(gas_price=500):
     print("--------------------------------")
     print("HBRL --> TEA Swap başlatılıyor.")
     
@@ -145,7 +145,7 @@ def hbrl_tea_swap():
         'data': tx_data2,
         'value': 0,
         'gas': 300000,
-        'gasPrice': w3.to_wei('0.002000292', 'gwei'),
+        'gasPrice': w3.to_wei(str(gas_price), 'gwei'),
         'nonce': w3.eth.get_transaction_count(address),
         'chainId': 10218
     }
@@ -159,9 +159,9 @@ def hbrl_tea_swap():
     else:
         print("HBRL --> TEA Swap başarısız.")
 
-    time.sleep(random.randint(2, 5))
+    time.sleep(random.randint(3, 8))
 
-def daun_tea_swap():
+def daun_tea_swap(gas_price=500):
     print("--------------------------------")
     print("DAUN --> TEA Swap başlatılıyor.")
     
@@ -185,7 +185,7 @@ def daun_tea_swap():
         'data': tx_data2,
         'value': 0,
         'gas': 300000,
-        'gasPrice': w3.to_wei('0.002000292', 'gwei'),
+        'gasPrice': w3.to_wei(str(gas_price), 'gwei'),
         'nonce': w3.eth.get_transaction_count(address),
         'chainId': 10218
     }
@@ -199,7 +199,7 @@ def daun_tea_swap():
     else:
         print("DAUN --> TEA Swap başarısız.")
     
-    time.sleep(random.randint(2, 5))       
+    time.sleep(random.randint(3, 8))       
 
 def main():
     tea_DAUN_swap()
