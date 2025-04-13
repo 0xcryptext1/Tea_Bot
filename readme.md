@@ -2,6 +2,8 @@
 
 Bu proje, TEA ağında tx kasmanızı sağlayan bir bot içerir. Aşağıdaki adımları izleyerek projeyi kurabilir ve çalıştırabilirsiniz.
 
+***BAŞLAMADAN ÖNCE https://www.teaswap.xyz/swap SİTESİNDEN AZ MİKTARDA HBRL ve DAUN TOKENLERİ ALMANIZ GEREKİR***
+
 ## Gereksinimler
 
 Bu projeyi çalıştırmak için aşağıdaki yazılımların yüklü olması gerekmektedir:
